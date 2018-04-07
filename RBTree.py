@@ -216,7 +216,7 @@ class RedBlackTree:
 
     def tree_search(self, x, k): # key is the number we're searching for
         if x == self.NIL or k == x.key:
-            return x
+            return x.dictionary
         if k < x.key:
             return self.tree_search(x.left, k)
         else:
@@ -275,6 +275,23 @@ class RedBlackTree:
         R = self.best_path_value(x.right)
 
         return max(L, R) + str(x.key).count('5')
+    
+#Suggestion for storing/maybe displaying data on the site
+"""
+This import statement in the back end: from RBTree import RedBlackTree
+
+position = 1 #Have this before you recieve the data from the site
+rbt = RedBlackTree() #and this as well
+test = createdict.get_dictionary()
+
+result = rbt.search(position)
+if result == False:
+    rbt.insert(position, test)
+    position += 1
+    result = rbt.search(position - 1)
+#else you already have the result you want
+#Search should be giving the dictionary instead of the position key
+"""
 
 """
 def driver():
