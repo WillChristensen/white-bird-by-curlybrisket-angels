@@ -22,6 +22,20 @@ category2 = "bye"
 state = None
 city = "howdy"
 company = "yes"
+
+#Non-class version
+search_found = 0
+
+current_dict = {"category1": category1, "category2": category2, "state": state
+                             "city": city, "company": company}
+
+for k, v in list(current_dict.items()):
+    if v == None:
+        del self.current_dict[k]
+
+if bool(current_dict.items()):
+    search_found = 1
+
 """
 
 # set the project root directory as the static folder, you can set others.
