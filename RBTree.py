@@ -58,10 +58,10 @@ class RedBlackTree:
         y.right = x
         x.parent = y
 
-    def insert(self, value):
+    def insert(self, value, dictionary):
         y = self.NIL
         x = self.root
-        z = self.Nodes(value, 'RED', self.NIL)
+        z = self.Nodes(value, 'RED', self.NIL, dictionary)
         while x != self.NIL:
             y = x
             if z.key < x.key:
